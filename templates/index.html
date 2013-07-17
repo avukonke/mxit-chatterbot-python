@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta name="mxit" content="no_clearscreen"/>
+    </head>
+    <body>
+        {% if not msgs %}
+            <p> Welcome to chatterbot! Say hello? </p>
+        {% endif %}
+        {% for msg in msgs %}
+            <p> {{Markup(msg)}} </p>
+        {% endfor %}
+    </body>
+    <form action='/' method='GET'>
+        <input type='text' name='input'/>
+        <input type='submit'/>
+    </form>
+</html>
